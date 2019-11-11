@@ -23,6 +23,6 @@ function checkAnswer() {
     document.getElementById('result').innerHTML = "Winner!";
   }
   else {
-    document.getElementById('result').innerHTML = "You lost. Guess again";
+    document.getElementById('result').innerHTML = "You lost. The letter was: '" + letter + "' Guess again";
   }
 }
