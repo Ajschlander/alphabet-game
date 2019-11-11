@@ -8,16 +8,17 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
   </head>
   <body>
 
     <div class="container">
       <div class="row">
         <div class="col-12">
-          <h1 class="text-center">Type any 1 letter to submit your guess!</h1>
+          <h1 class="text-center mb-5">Type any 1 letter to submit your guess!</h1>
           <div class="input-group input-group-lg">
             <div class="input-group-prepend">
-              <span class="input-group-text" id="inputGroup-sizing-lg">Enter your guess</span>
+              <span class="input-group-text" id="inputGroup-sizing-lg">Enter your guess here: </span>
             </div>
             <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" id="numberGuess">
           </div>
@@ -25,12 +26,12 @@
       </div>
       <div class="row">
         <div class="col-12">
-          <button type="button" class="btn btn-primary btn-lg btn-block mt-3" onclick="storeInput()">Submit your guess!</button>
+          <button type="button" class="btn btn-primary btn-lg btn-block mt-3" onclick="randomLetter(); storeInput(); checkAnswer()">Submit your guess!</button>
         </div>
       </div>
       <div class="row">
         <div class="col-12">
-          <h1 class="display-4 text-center mt-5">Winner!</h1>
+          <h1 class="display-4 text-center mt-5" id="result">Guess a letter first!</h1>
         </div>
       </div>
     </div>
