@@ -23,16 +23,22 @@ function storeInput() {
     alert("Please enter a single letter.");
   }
   else{
-    lettersGuessed.push(input);
-    var lettersGuessedAsString = lettersGuessed.join(', ');
-    document.getElementById('guesses').innerHTML = "Letters you have guessed: " + lettersGuessedAsString;
+    if (lettersGuessed.includes(input)) {
+      alert("You already guessed that! Try again.");
+      window.location.reload(false);
+    }
+    else{
+      lettersGuessed.push(input);
+      let lettersGuessedAsString = lettersGuessed.join(', ');
+      document.getElementById('guesses').innerHTML = "Letters you have guessed: " + lettersGuessedAsString;
+    }
   }
 }
 
 function checkAnswer() {
-  if (letter == input) {
+  if (input === letter) {
     document.getElementById('result').innerHTML = "Winner!";
-    location.reload(true);
+    setTimeout(location.reload.bind(location), 2000);
   }
   else {
     document.getElementById('result').innerHTML = "You guessed wrong! Guess again.";
@@ -43,7 +49,7 @@ function checkAnswer() {
     else if (tries === 0) {
       document.getElementById('attempts').innerHTML = "YOU HAVE LOST";
       document.getElementById('inputGroup-sizing-lg').innerHTML = "Click here to try again";
-      location.reload(true);
+      setTimeout(location.reload.bind(location), 2000);
     }
   }
 }
