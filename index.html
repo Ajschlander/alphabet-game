@@ -26,12 +26,22 @@
       </div>
       <div class="row">
         <div class="col-12">
-          <button type="button" class="btn btn-primary btn-lg btn-block mt-3" onclick="randomLetter(); storeInput(); checkAnswer()">Submit your guess!</button>
+          <button type="button" class="btn btn-primary btn-lg btn-block mt-3" onclick="checkAnswer(); storeInput();">Submit your guess!</button>
         </div>
       </div>
       <div class="row">
         <div class="col-12">
           <h1 class="display-4 text-center mt-5" id="result">Guess a letter first!</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <h3 class="text-center mt-5" id="attempts">You have 10 tries to guess the letter correctly!</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <h3 class="text-center mt-5" id="guesses">Letters you have guessed:</h3>
         </div>
       </div>
     </div>
